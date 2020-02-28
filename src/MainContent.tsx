@@ -1,10 +1,17 @@
 import React from "react"
 import SectionItem from "./SectionItem"
+import { AppEvent } from "./App"
 
-export default class MainContens extends React.Component {
+interface Props {
+  events: AppEvent[]
+}
+
+export default class MainContens extends React.Component<Props> {
   render() {
     return(
-      <SectionItem />
+      <div>
+        {this.props.events.map((event)=> <SectionItem event={event}/>)}
+      </div>
     )
   }
 }
