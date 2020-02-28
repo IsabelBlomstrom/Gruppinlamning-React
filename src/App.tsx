@@ -1,26 +1,48 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { CSSProperties } from "react";
+import Header from "./Header";
+import MainContent from "./MainContent";
+import "./App.css";
+import Image from "./assets/gallery1.jpg";
+import Image2 from "./assets/gallery2.jpg";
+import Image3 from "./assets/gallery3.jpg";
+
+
+
+export interface AppEvent {
+  mainImg: string;
+  title: string;
+  eventHost: string;
+}
+
+const mockedData: AppEvent[] = [{
+  mainImg: Image,
+  title: "First",
+  eventHost: "Elin Alm"
+}, {
+  mainImg: Image2,
+  title: "Second",
+  eventHost: "Isabel Blomström"
+}, {
+  mainImg: Image3,
+  title: "Third",
+  eventHost: "Emelie Rosenlöw"
+}];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={appStyle}>
+      <Header />
+      <MainContent events={mockedData} />
     </div>
   );
+}
+
+const appStyle: CSSProperties = {
+    height: "100%",
+    width: "100%",
+    color: "black",
+    fontSize: "1.2rem",
+    fontFamily: 'Raleway',
 }
 
 export default App;
