@@ -5,29 +5,59 @@ interface Props {
   event: AppEvent;
 }
 
-export default class SectionItem extends React.Component<Props> {
+interface State {
+  isMouseOver: boolean;
+}
+
+export default class SectionItem extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
+    this.state = { isMouseOver: false };
   }
+
+  handleMouseEnter = () => {
+    this.setState({ isMouseOver: true });
+  };
+
+  handleMouseLeave = () => {
+    this.setState({ isMouseOver: false });
+  };
+
   render() {
     return (
-      <div style={centerImages}>
-        <img style={imgStyle} src={this.props.event.mainImg} alt="bild" />
+      <div
+        style={imageDiv}
+        onMouseEnter={this.handleMouseEnter}
+        onMouseLeave={this.handleMouseLeave}
+      >
+        {this.state.isMouseOver ? (
+          <>
+            <img style={imgStyle} src={this.props.event.mainImg} alt="bild" />
+            <h1 style={textStyle}>hejhejhejhejhehejhejejeh</h1>
+          </>
+        ) : (
+          <img style={imgStyle} src={this.props.event.mainImg} alt="bild" />
+        )}
       </div>
     );
   }
 }
 
 const imgStyle: CSSProperties = {
-  width: "90%",
+  width: "60rem",
+  height: "20rem",
   objectFit: "cover",
-  margin: "0.5rem",
+  margin: "0.5rem"
 };
 
-const centerImages: CSSProperties = {
+const textStyle: CSSProperties = {
+  position: "absolute",
+  color: "white"
+};
+
+const imageDiv: CSSProperties = {
+  width: "60rem",
   display: "flex",
-  flexDirection: "column",
   justifyContent: "center",
-  alignItems: "center",
-  textAlign: "center",
+  alignItems: "center"
 };

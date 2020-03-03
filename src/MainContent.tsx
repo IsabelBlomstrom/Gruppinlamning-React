@@ -1,4 +1,4 @@
-import React from "react"
+import React, { CSSProperties } from "react"
 import SectionItem from "./SectionItem"
 import { AppEvent } from "./App"
 
@@ -9,9 +9,16 @@ interface Props {
 export default class MainContens extends React.Component<Props> {
   render() {
     return(
-      <div>
+      <div style={mainStyle}>
         {this.props.events.map((event)=> <SectionItem event={event}/>)}
       </div>
     )
   }
+}
+
+const mainStyle: CSSProperties = {
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
 }
