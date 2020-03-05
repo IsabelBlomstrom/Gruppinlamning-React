@@ -1,18 +1,27 @@
-import React, { CSSProperties } from "react"
-import SectionItem from "./SectionItem"
-import { AppEvent } from "./App"
+import React, { CSSProperties } from "react";
+import SectionItem from "./SectionItem";
+import { AppEvent } from "./App";
 
 interface Props {
-  events: AppEvent[]
+  events: AppEvent[];
 }
 
-export default class MainContens extends React.Component<Props> {
+interface State {}
+
+export default class MainContens extends React.Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+  }
+
   render() {
-    return(
+    console.log(this.props.events);
+    return (
       <div style={mainStyle}>
-        {this.props.events.map((event)=> <SectionItem key={event.title} event={event}/>)}
+        {this.props.events.map(event => (
+          <SectionItem key={event.title} event={event} />
+        ))}
       </div>
-    )
+    );
   }
 }
 
@@ -20,5 +29,11 @@ const mainStyle: CSSProperties = {
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
-  alignItems: "center",
-}
+  alignItems: "center"
+};
+
+const styleModal: CSSProperties = {
+  display: "flex",
+  justifyContent: "center",
+  color: "red"
+};
