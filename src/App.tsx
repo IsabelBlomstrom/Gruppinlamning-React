@@ -16,7 +16,7 @@ export interface AppEvent {
 
 const mockedData: AppEvent[] = [{
   mainImg: Image,
-  title: "Vårdagens strimma",
+  title: "En blandning av sött och salt",
   eventHost: "Elin Alm"
 }, {
   mainImg: Image2,
