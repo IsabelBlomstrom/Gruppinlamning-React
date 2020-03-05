@@ -10,7 +10,7 @@ export default class MainContens extends React.Component<Props> {
   render() {
     return(
       <div style={mainStyle}>
-        {this.props.events.map((event)=> <SectionItem event={event}/>)}
+        {this.props.events.map((event)=> <SectionItem key={event.title} event={event}/>)}
       </div>
     )
   }

@@ -16,15 +16,15 @@ export interface AppEvent {
 
 const mockedData: AppEvent[] = [{
   mainImg: Image,
-  title: "First",
+  title: "Vårdagens strimma",
   eventHost: "Elin Alm"
 }, {
   mainImg: Image2,
-  title: "Second",
+  title: "Doften av kaffe och öl",
   eventHost: "Isabel Blomström"
 }, {
   mainImg: Image3,
-  title: "Third",
+  title: "Frost på grisknorr",
   eventHost: "Emelie Rosenlöw"
 }];
 

@@ -13,6 +13,8 @@ export default class SectionItem extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { isMouseOver: false };
+    console.log(props + 'proppsen änna');
+
   }
 
   handleMouseEnter = () => {
@@ -32,23 +34,29 @@ export default class SectionItem extends React.Component<Props, State> {
       >
         {this.state.isMouseOver ? (
           <>
-            <img style={imgStyle} src={this.props.event.mainImg} alt="bild" />
-            <h1 style={textStyle}>hejhejhejhejhehejhejejeh</h1>
+{            <img style={imgStyleHover} src={this.props.event.mainImg} alt="bild" />
+}            <h1 style={textStyle}>{this.props.event.title}</h1>            
           </>
         ) : (
           <img style={imgStyle} src={this.props.event.mainImg} alt="bild" />
         )}
       </div>
     );
-  }
+  } 
 }
 
 const imgStyle: CSSProperties = {
   width: "60rem",
   height: "20rem",
   objectFit: "cover",
-  margin: "0.5rem"
 };
+
+const imgStyleHover: CSSProperties = {
+  width: "60rem",
+  height: "20rem",
+  objectFit: "cover",
+  opacity: "0.6"
+}
 
 const textStyle: CSSProperties = {
   position: "absolute",
@@ -59,5 +67,6 @@ const imageDiv: CSSProperties = {
   width: "60rem",
   display: "flex",
   justifyContent: "center",
-  alignItems: "center"
+  alignItems: "center",
+  margin: "0.5rem"
 };
