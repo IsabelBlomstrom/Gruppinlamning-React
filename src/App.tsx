@@ -5,7 +5,10 @@ import "./App.css";
 import Image from "./assets/gallery1.jpg";
 import Image2 from "./assets/gallery2.jpg";
 import Image3 from "./assets/gallery3.jpg";
-
+import { Switch, Route, BrowserRouter } from "react-router-dom";
+import Kontakt from "./Kontakt";
+import Omoss from "./Omoss";
+import Studio from './Studio'
 
 
 export interface AppEvent {
@@ -34,10 +37,24 @@ const mockedData: AppEvent[] = [{
 
 function App() {
   return (
-    <div style={appStyle}>
-      <Header />
-      <MainContent events={mockedData} />
-    </div>
+      <BrowserRouter>
+      <div style={appStyle}>
+        <Header />
+        <Switch>
+          <Route exact path="/">
+            <MainContent events={mockedData} />
+          </Route>
+          <Route path="/Kontakt">
+            <Kontakt />
+          </Route> <Route path="/Omoss">
+            <Omoss />
+          </Route>
+          <Route path="/Studio">
+            <Studio />
+          </Route>
+        </Switch>
+      </div>
+      </BrowserRouter>
   );
 }
 
