@@ -37,7 +37,7 @@ export default class SectionItem extends React.Component<Props, State> {
     if (this.state.showModal) {
       return (
         <Modal>
-          <img src={this.props.event.mainImg} alt="bild" />
+          <img style={centeredModal} src={this.props.event.mainImg} alt="bild"/>
         </Modal>
       );
     }
@@ -97,4 +97,15 @@ const imageDiv: CSSProperties = {
   justifyContent: "center",
   alignItems: "center",
   margin: "0.5rem"
+};
+
+const centeredModal: CSSProperties = {
+  position: "fixed",
+  width: "100vw",
+  height: "100vh",
+  backgroundColor: "rgba(0, 0, 0, 0.5)",
+  visibility: "hidden",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
 };
