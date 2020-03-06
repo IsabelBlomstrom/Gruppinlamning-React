@@ -15,8 +15,6 @@ export default class SectionItem extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { isMouseOver: false, showModal: false };
-
-    console.log(props + "proppsen änna");
   }
 
   handleMouseEnter = () => {
@@ -37,7 +35,14 @@ export default class SectionItem extends React.Component<Props, State> {
     if (this.state.showModal) {
       return (
         <Modal>
-          <img style={centeredModal} src={this.props.event.mainImg} alt="bild"/>
+            <img
+              style={modalImage}
+              src={this.props.event.mainImg}
+              onClick={this.toggleModal}
+              alt="bild"
+            />
+            <h1 style={textStyle2}>{this.props.event.eventHost}</h1>
+            <p style={textStyle2}>{this.props.event.eventInfo}</p>
         </Modal>
       );
     }
@@ -51,7 +56,6 @@ export default class SectionItem extends React.Component<Props, State> {
           style={imageDiv}
           onMouseEnter={this.handleMouseEnter}
           onMouseLeave={this.handleMouseLeave}
-          onClick={this.toggleModal}
         >
           {this.state.isMouseOver ? (
             <>
@@ -59,6 +63,7 @@ export default class SectionItem extends React.Component<Props, State> {
                 <img
                   style={imgStyleHover}
                   src={this.props.event.mainImg}
+                  onClick={this.toggleModal}
                   alt="bild"
                 />
               }{" "}
@@ -72,6 +77,11 @@ export default class SectionItem extends React.Component<Props, State> {
     );
   }
 }
+
+const modalImage: CSSProperties = {
+  maxWidth: "80%",
+  maxHeight: "80%"
+};
 
 const imgStyle: CSSProperties = {
   width: "60rem",
@@ -91,21 +101,15 @@ const textStyle: CSSProperties = {
   color: "white"
 };
 
+const textStyle2: CSSProperties = {
+  color: "white",
+  margin: "0"
+}
+
 const imageDiv: CSSProperties = {
   width: "60rem",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
   margin: "0.5rem"
-};
-
-const centeredModal: CSSProperties = {
-  position: "fixed",
-  width: "100vw",
-  height: "100vh",
-  backgroundColor: "rgba(0, 0, 0, 0.5)",
-  visibility: "hidden",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
 };

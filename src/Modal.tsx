@@ -1,4 +1,4 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import ReactDOM, { createPortal } from "react-dom";
 
 interface Props {}
@@ -21,8 +21,21 @@ export default class Modal extends React.Component<Props> {
 
   render() {
     return ReactDOM.createPortal(
-      <div>{this.props.children}</div>,
+      <div style={modalStyle}>{this.props.children}</div>,
       this.modalElement
     );
   }
+}
+
+const modalStyle: CSSProperties = {
+  position: "fixed",
+  top: "0",
+  left: "0",
+  width: "100vw",
+  height: "100vh",
+  backgroundColor: "rgba(0, 0, 0, 0.9)",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center"
 }

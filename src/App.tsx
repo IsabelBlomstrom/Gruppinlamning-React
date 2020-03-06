@@ -15,20 +15,24 @@ export interface AppEvent {
   mainImg: string;
   title: string;
   eventHost: string;
+  eventInfo: string;
 }
 
 const mockedData: AppEvent[] = [{
   mainImg: Image,
   title: "En blandning av sött och salt",
-  eventHost: "Elin Alm"
+  eventHost: "Elin Alm",
+  eventInfo: "Utställning 200123, konstnären visade upp hur en mix av två världar kan se ut",
 }, {
   mainImg: Image2,
   title: "Doften av kaffe och öl",
-  eventHost: "Isabel Blomström"
+  eventHost: "Isabel Blomström",
+  eventInfo: "Uställning 191013, kostnären visar abstrakt upp sin förkärlek för olika drycker"
 }, {
   mainImg: Image3,
   title: "Frost på grisknorr",
-  eventHost: "Emelie Rosenlöw"
+  eventHost: "Emelie Rosenlöw",
+  eventInfo: "Utställning 190925, kostnärens naturnära öga fångar besökaren på djupet"
 }];
 
 function App() {
