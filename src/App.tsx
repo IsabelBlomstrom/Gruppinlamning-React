@@ -22,12 +22,12 @@ const mockedData: AppEvent[] = [{
   mainImg: Image,
   title: "En blandning av sött och salt",
   eventHost: "Elin Alm",
-  eventInfo: "Utställning 200123, utställaren visade upp hur en blandning av två världar kan se ut",
+  eventInfo: "Utställning 200123, konstnären visade upp hur en mix av två världar kan se ut",
 }, {
   mainImg: Image2,
   title: "Doften av kaffe och öl",
   eventHost: "Isabel Blomström",
-  eventInfo: "Uställning 191013, kostnären visar upp sin förkärlek för olika drycker"
+  eventInfo: "Uställning 191013, kostnären visar abstrakt upp sin förkärlek för olika drycker"
 }, {
   mainImg: Image3,
   title: "Frost på grisknorr",

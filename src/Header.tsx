@@ -1,7 +1,6 @@
 import React, { CSSProperties } from "react";
 import Logo from "./assets/logolunden.png";
 import {Link} from 'react-router-dom'
-import {BrowserRouter} from 'react-router-dom';
 
 export default class Header extends React.Component {
   render() {

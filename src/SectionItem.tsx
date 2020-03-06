@@ -15,8 +15,6 @@ export default class SectionItem extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { isMouseOver: false, showModal: false };
-
-    console.log(props + "proppsen änna");
   }
 
   handleMouseEnter = () => {
@@ -104,7 +102,8 @@ const textStyle: CSSProperties = {
 };
 
 const textStyle2: CSSProperties = {
-  color: "white"
+  color: "white",
+  margin: "0"
 }
 
 const imageDiv: CSSProperties = {
