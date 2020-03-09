@@ -2,7 +2,6 @@ import React, { CSSProperties } from "react";
 import Formsvar from "./Formsvar";
 
 interface Props {
-  // svar: {};
 }
 
 interface State {
@@ -62,6 +61,8 @@ export default class Kontakt extends React.Component<Props, State> {
 
     return (
       <div style={FormStyle}>
+        <p style={{margin: "0 0 2rem 0", textAlign:"center"}}>Vill ni komma i kontakt med oss? <br/>
+          Snälla fyll i formuläret nedan och vi kontaktar dig.</p>
         <form onSubmit={this.handleSubmit}>
           <fieldset>
             <label style={labelStyle}>
@@ -102,7 +103,8 @@ export default class Kontakt extends React.Component<Props, State> {
 const FormStyle: CSSProperties = {
   display: "flex",
   justifyContent: "center",
-  alignItems: "center"
+  alignItems: "center",
+  flexDirection: "column",
 };
 
 const inputStyle: CSSProperties = {
