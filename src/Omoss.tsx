@@ -1,19 +1,11 @@
-import React from 'react'
+import React from "react";
 
+interface Props {}
 
-interface Props {
-
-}
-
-interface State {
-
-
-}
+interface State {}
 export default class Omoss extends React.Component<Props, State> {
- 
-    render(){
-        return (
-            <h1>Om oss</h1>
-        )
-    }
+  render() {
+    console.log(this.props);
+    return <h1>Om oss</h1>;
+  }
 }
