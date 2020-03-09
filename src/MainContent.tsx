@@ -14,7 +14,7 @@ export default class MainContens extends React.Component<Props, State> {
   }
 
   render() {
-    console.log(this.props.events);
+    console.log(this.props);
     return (
       <div style={mainStyle}>
         {this.props.events.map(event => (

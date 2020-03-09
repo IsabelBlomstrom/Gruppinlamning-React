@@ -1,8 +1,8 @@
 import React, { CSSProperties } from "react";
 import Formsvar from "./Formsvar";
+import { Redirect, Switch, Route, RouteComponentProps } from "react-router-dom";
 
-interface Props {
-}
+interface Props extends RouteComponentProps {}
 
 interface State {
   bookingRequest: BookingRequest;
@@ -53,49 +53,64 @@ export default class Kontakt extends React.Component<Props, State> {
     this.setState({ isSubmitted: true });
   };
 
-  render() {
+  componentDidUpdate() {
     if (this.state.isSubmitted) {
-      return <Formsvar svar={this.state.bookingRequest} />;
-      // svar={this.state.bookingRequest}
+      this.setState({ isSubmitted: false });
+    }
+  }
+
+  render() {
+    const { url, path } = this.props.match;
+    if (this.state.isSubmitted) {
+      return <Redirect to={url + "/bekraftelse"} />;
     }
 
     return (
-      <div style={FormStyle}>
-        <p style={{margin: "0 0 2rem 0", textAlign:"center"}}>Vill ni komma i kontakt med oss? <br/>
-          Snälla fyll i formuläret nedan och vi kontaktar dig.</p>
-        <form onSubmit={this.handleSubmit}>
-          <fieldset>
-            <label style={labelStyle}>
-              Namn:
-              <input
-                style={inputStyle}
-                type="text"
-                value={this.state.bookingRequest.name}
-                onChange={this.handleInputChangeName}
-              ></input>
-            </label>
-            <label style={labelStyle}>
-              Telefonnummer:
-              <input
-                style={inputStyle}
-                type="text"
-                value={this.state.bookingRequest.telephone}
-                onChange={this.handleInputChangeTelephone}
-              ></input>
-            </label>
-            <textarea
-              placeholder={"Skriv ditt meddelande här"}
-              cols={100}
-              rows={15}
-              style={areaStyle}
-              value={this.state.bookingRequest.message}
-              onChange={this.handleInputChangeMessage}
-            ></textarea>{" "}
-            <br />
-            <input type="submit" value="submit" />
-          </fieldset>
-        </form>
-      </div>
+      <Switch>
+        <Route path={path + "/bekraftelse"}>
+          <Formsvar svar={this.state.bookingRequest} />
+        </Route>
+        <Route>
+          <div style={FormStyle}>
+            <p style={{ margin: "0 0 2rem 0", textAlign: "center" }}>
+              Vill ni komma i kontakt med oss? <br />
+              Snälla fyll i formuläret nedan och vi kontaktar dig.
+            </p>
+            <form onSubmit={this.handleSubmit}>
+              <fieldset>
+                <label style={labelStyle}>
+                  Namn:
+                  <input
+                    style={inputStyle}
+                    type="text"
+                    value={this.state.bookingRequest.name}
+                    onChange={this.handleInputChangeName}
+                  ></input>
+                </label>
+                <label style={labelStyle}>
+                  Telefonnummer:
+                  <input
+                    style={inputStyle}
+                    type="text"
+                    value={this.state.bookingRequest.telephone}
+                    onChange={this.handleInputChangeTelephone}
+                  ></input>
+                </label>
+                <textarea
+                  placeholder={"Skriv ditt meddelande här"}
+                  cols={100}
+                  rows={15}
+                  style={areaStyle}
+                  value={this.state.bookingRequest.message}
+                  onChange={this.handleInputChangeMessage}
+                ></textarea>{" "}
+                <br />
+                <input type="submit" value="submit" />
+              </fieldset>
+            </form>
+          </div>
+        </Route>
+      </Switch>
     );
   }
 }
@@ -104,7 +119,7 @@ const FormStyle: CSSProperties = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  flexDirection: "column",
+  flexDirection: "column"
 };
 
 const inputStyle: CSSProperties = {
