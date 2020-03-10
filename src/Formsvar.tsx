@@ -1,6 +1,5 @@
 import React, { Component, CSSProperties } from "react";
 import { BookingRequest } from "./Kontakt";
-import { Link } from "react-router-dom";
 
 interface Props {
   svar: BookingRequest;

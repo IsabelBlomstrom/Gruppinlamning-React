@@ -35,14 +35,14 @@ export default class SectionItem extends React.Component<Props, State> {
     if (this.state.showModal) {
       return (
         <Modal>
-            <img
-              style={modalImage}
-              src={this.props.event.mainImg}
-              onClick={this.toggleModal}
-              alt="bild"
-            />
-            <h1 style={textStyle2}>{this.props.event.eventHost}</h1>
-            <p style={textStyle2}>{this.props.event.eventInfo}</p>
+          <img
+            style={modalImage}
+            src={this.props.event.mainImg}
+            onClick={this.toggleModal}
+            alt="bild"
+          />
+          <h1 style={textStyle2}>{this.props.event.eventHost}</h1>
+          <p style={textStyle2}>{this.props.event.eventInfo}</p>
         </Modal>
       );
     }
@@ -104,7 +104,7 @@ const textStyle: CSSProperties = {
 const textStyle2: CSSProperties = {
   color: "white",
   margin: "0"
-}
+};
 
 const imageDiv: CSSProperties = {
   width: "60rem",

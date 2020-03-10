@@ -32,8 +32,8 @@ const mainStyle: CSSProperties = {
   alignItems: "center"
 };
 
-const styleModal: CSSProperties = {
-  display: "flex",
-  justifyContent: "center",
-  color: "red"
-};
+// const styleModal: CSSProperties = {
+//   display: "flex",
+//   justifyContent: "center",
+//   color: "red"
+// };
