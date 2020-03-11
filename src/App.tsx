@@ -42,7 +42,6 @@ const mockedData: AppEvent[] = [
 ];
 
 function App() {
-  console.log("render app");
   return (
     <BrowserRouter>
       <div style={appStyle}>
