@@ -74,7 +74,7 @@ export default class Kontakt extends React.Component<Props, State> {
           <div style={FormStyle}>
             <p style={{ margin: "0 0 2rem 0", textAlign: "center" }}>
               Vill ni komma i kontakt med oss? <br />
-              Snälla fyll i formuläret nedan och vi kontaktar dig.
+              Snälla fyll i formuläret nedan så kontaktar vi dig.
             </p>
             <form onSubmit={this.handleSubmit}>
               <fieldset>
