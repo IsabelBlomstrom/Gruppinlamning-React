@@ -75,7 +75,8 @@ export default class Nyhetsbrev extends Component<Props, State> {
 }
 const nyhetsbrevTextStyle: CSSProperties = {
   fontSize: "1rem",
-  fontWeight: "bold"
+  fontWeight: "bold",
+  cursor: "pointer"
 };
 
 const nyhetsbrevFormStyle: CSSProperties = {
