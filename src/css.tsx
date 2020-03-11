@@ -3,8 +3,8 @@ import { CSSProperties } from "react";
 export const divStyleOnPages: CSSProperties = {
   display: "flex",
   justifyContent: "center",
+  alignItems: "center",
   flexDirection: "column",
-  alignItems: "center"
 };
 
 export const picturesOnPages: CSSProperties = {
