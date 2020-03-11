@@ -21,7 +21,7 @@ export default class Omoss extends React.Component<Props, State> {
 
   async componentDidMount() {
     const response = await Axios.get(
-      "https://api.unsplash.com/search/photos?query=gallery&client_id=7bKy_B0c-gHiqPQ51MWwAEwIPpy6ouXhsnCnjl4nPoM"
+      "https://api.unsplash.com/search/photos?query=gallery&per_page=3&client_id=7bKy_B0c-gHiqPQ51MWwAEwIPpy6ouXhsnCnjl4nPoM"
     );
     console.log(response.data.results);
     
