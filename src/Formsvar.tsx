@@ -1,6 +1,5 @@
 import React, { Component, CSSProperties } from "react";
 import { BookingRequest } from "./Kontakt";
-import { Link } from "react-router-dom";
 
 interface Props {
   svar: BookingRequest;
@@ -14,8 +13,6 @@ export default class Formsvar extends React.Component<Props> {
   render() {
     return (
       <div style={formSvarStyle}>
-        <Link to="/Kontakt" />
-
         <p style={{ fontWeight: "bold" }}>
           Tack för ditt meddelande! Om någon av uppgifterna inte stämmer, <br />
           vänlig skicka ett till meddelande till oss med ändringarna.
