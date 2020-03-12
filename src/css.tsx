@@ -4,7 +4,7 @@ export const divStyleOnPages: CSSProperties = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  flexDirection: "column",
+  flexDirection: "column"
 };
 
 export const picturesOnPages: CSSProperties = {

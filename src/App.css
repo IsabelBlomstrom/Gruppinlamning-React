@@ -1,0 +1,16 @@
+.Kontakt,
+.omOss,
+.studio,
+.maincontent {
+  animation: 1s slidein;
+}
+
+@keyframes slidein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

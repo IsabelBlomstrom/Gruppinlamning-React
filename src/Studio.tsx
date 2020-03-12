@@ -8,7 +8,7 @@ interface State {}
 export default class Studio extends React.Component<Props, State> {
   render() {
     return (
-      <div style={divStyleOnPages}>
+      <div style={divStyleOnPages} className="studio">
         <img style={picturesOnPages} src={Image}></img>
 
         <p style={textStylePages}>
