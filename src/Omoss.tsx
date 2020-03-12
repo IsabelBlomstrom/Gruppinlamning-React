@@ -24,14 +24,16 @@ export default class Omoss extends React.Component<Props, State> {
       "https://api.unsplash.com/search/photos?query=gallery&per_page=3&client_id=7bKy_B0c-gHiqPQ51MWwAEwIPpy6ouXhsnCnjl4nPoM"
     );
     console.log(response.data.results);
-    
-    const images = response.data.results.map((image: any) => image.urls.regular);
+
+    const images = response.data.results.map(
+      (image: any) => image.urls.regular
+    );
     this.setState({ images });
   }
 
   render() {
     return (
-      <div style={divStyleOnPages}>
+      <div style={divStyleOnPages} className="omOss">
         {/*         <img src={Image} alt="Picture of hall" style={picturesOnPages} />
          */}
 
@@ -56,4 +58,4 @@ export default class Omoss extends React.Component<Props, State> {
 
 const imageStyle: CSSProperties = {
   margin: "0.3rem"
-}
+};
