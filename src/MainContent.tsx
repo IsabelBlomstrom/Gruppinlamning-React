@@ -15,7 +15,7 @@ export default class MainContens extends React.Component<Props, State> {
 
   render() {
     return (
-      <div style={mainStyle}>
+      <div style={mainStyle} className="mainContent">
         {this.props.events.map(event => (
           <SectionItem key={event.title} event={event} />
         ))}
