@@ -3,6 +3,7 @@ import Image from "./assets/omOss.jpg";
 import { divStyleOnPages, picturesOnPages, textStylePages } from "../src/css";
 import Nyhetsbrev from "./Nyhetsbrev";
 import Axios from "axios";
+import ErrorBoundary from "./ErrorBoundery";
 
 interface Props {}
 
@@ -47,7 +48,9 @@ export default class Omoss extends React.Component<Props, State> {
           Vill du veta mer om oss? Gå in under kontakter och lämna ett
           meddelande.
         </p>
-        <Nyhetsbrev />
+        <ErrorBoundary>
+          <Nyhetsbrev />
+        </ErrorBoundary>
         {this.state.images.map(image => (
           <img style={imageStyle} src={image}></img>
         ))}
