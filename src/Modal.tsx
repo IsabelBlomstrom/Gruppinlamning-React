@@ -1,15 +1,11 @@
 import React, { CSSProperties } from "react";
-import ReactDOM, { createPortal } from "react-dom";
+import ReactDOM from "react-dom";
 
 interface Props {}
 
 export default class Modal extends React.Component<Props> {
   modalDiv = document.getElementById("modal-root");
   modalElement: HTMLElement = document.createElement("div");
-
-  constructor(props: Props) {
-    super(props);
-  }
 
   componentDidMount() {
     this.modalDiv?.appendChild(this.modalElement);
@@ -37,5 +33,5 @@ const modalStyle: CSSProperties = {
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
-  alignItems: "center"
+  alignItems: "center",
 };

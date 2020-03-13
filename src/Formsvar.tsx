@@ -5,10 +5,7 @@ interface Props {
   svar: BookingRequest;
 }
 
-export default class Formsvar extends React.Component<Props> {
-  constructor(props: Props) {
-    super(props);
-  }
+export default class Formsvar extends Component<Props> {
 
   render() {
     return (

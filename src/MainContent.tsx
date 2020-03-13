@@ -1,7 +1,6 @@
 import React, { CSSProperties } from "react";
 import SectionItem from "./SectionItem";
 import { AppEvent } from "./App";
-import { divStyleOnPages } from "./css";
 
 interface Props {
   events: AppEvent[];
@@ -10,9 +9,6 @@ interface Props {
 interface State {}
 
 export default class MainContens extends React.Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-  }
 
   render() {
     return (
