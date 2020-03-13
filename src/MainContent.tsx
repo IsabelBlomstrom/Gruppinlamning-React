@@ -1,6 +1,7 @@
 import React, { CSSProperties } from "react";
 import SectionItem from "./SectionItem";
 import { AppEvent } from "./App";
+import { divStyleOnPages } from "./css";
 
 interface Props {
   events: AppEvent[];

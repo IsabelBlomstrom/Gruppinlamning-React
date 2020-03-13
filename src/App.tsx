@@ -1,6 +1,5 @@
-import React, { CSSProperties } from "react";
+import React, { CSSProperties, Suspense } from "react";
 import Header from "./Header";
-import MainContent from "./MainContent";
 import "./App.css";
 import Image from "./assets/gallery1.jpg";
 import Image2 from "./assets/gallery2.jpg";
@@ -9,6 +8,8 @@ import { Switch, Route, BrowserRouter } from "react-router-dom";
 import Kontakt from "./Kontakt";
 import Omoss from "./Omoss";
 import Studio from "./Studio";
+
+const MainContent = React.lazy(() => import("./MainContent"));
 
 export interface AppEvent {
   mainImg: string;
@@ -48,7 +49,9 @@ function App() {
         <Header />
         <Switch>
           <Route exact path="/">
-            <MainContent events={mockedData} />
+            <Suspense fallback={<div>Loading...</div>}>
+              <MainContent events={mockedData} />
+            </Suspense>
           </Route>
           <Route path="/Kontakt" component={Kontakt} />
           <Route path="/Omoss" component={Omoss} />
