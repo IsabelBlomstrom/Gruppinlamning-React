@@ -1,4 +1,4 @@
-import React, { CSSProperties } from "react";
+import React from "react";
 import Image from "./assets/studio.jpg";
 import { divStyleOnPages, textStylePages, picturesOnPages } from "./css";
 
@@ -9,7 +9,7 @@ export default class Studio extends React.Component<Props, State> {
   render() {
     return (
       <div style={divStyleOnPages} className="studio">
-        <img style={picturesOnPages} src={Image}></img>
+        <img alt="gallery" style={picturesOnPages} src={Image}></img>
 
         <p style={textStylePages}>
           Galleri Lunden erbjuder en ljus rymlig studio på Lunden 8. Studion är

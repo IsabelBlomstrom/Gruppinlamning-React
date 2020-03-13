@@ -45,6 +45,8 @@ export default class SectionItem extends React.Component<Props, State> {
           <p style={textStyle2}>{this.props.event.eventInfo}</p>
         </Modal>
       );
+    } else {
+      return undefined
     }
   }
 
@@ -78,9 +80,12 @@ export default class SectionItem extends React.Component<Props, State> {
   }
 }
 
+
 const modalImage: CSSProperties = {
   maxWidth: "80%",
-  maxHeight: "80%"
+  maxHeight: "80%",
+  border: "2px solid white"
+
 };
 
 const imgStyle: CSSProperties = {

@@ -1,6 +1,5 @@
 import React, { CSSProperties } from "react";
-import Image from "./assets/omOss.jpg";
-import { divStyleOnPages, picturesOnPages, textStylePages } from "../src/css";
+import { divStyleOnPages, textStylePages } from "../src/css";
 import Nyhetsbrev from "./Nyhetsbrev";
 import Axios from "axios";
 
@@ -11,9 +10,6 @@ interface State {
 }
 
 export default class Omoss extends React.Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-  }
 
   state = {
     images: []
@@ -23,7 +19,6 @@ export default class Omoss extends React.Component<Props, State> {
     const response = await Axios.get(
       "https://api.unsplash.com/search/photos?query=gallery&per_page=3&client_id=7bKy_B0c-gHiqPQ51MWwAEwIPpy6ouXhsnCnjl4nPoM"
     );
-    console.log(response.data.results);
 
     const images = response.data.results.map(
       (image: any) => image.urls.regular
@@ -34,9 +29,6 @@ export default class Omoss extends React.Component<Props, State> {
   render() {
     return (
       <div style={divStyleOnPages} className="omOss">
-        {/*         <img src={Image} alt="Picture of hall" style={picturesOnPages} />
-         */}
-
         <p style={textStylePages}>
           Galleri Lunden öppnade sina dörrar hösten 2018. Det startades av tre
           konstnärer som en tanke att underlätta för andra kollegor inom
@@ -49,7 +41,7 @@ export default class Omoss extends React.Component<Props, State> {
         </p>
         <Nyhetsbrev />
         {this.state.images.map(image => (
-          <img style={imageStyle} src={image}></img>
+          <img alt="gallery" style={imageStyle} src={image}></img>
         ))}
       </div>
     );

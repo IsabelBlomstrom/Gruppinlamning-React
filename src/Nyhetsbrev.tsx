@@ -1,5 +1,4 @@
 import React, { Component, CSSProperties } from "react";
-import { textStylePages } from "./css";
 
 interface Props {}
 
@@ -53,6 +52,7 @@ export default class Nyhetsbrev extends Component<Props, State> {
       return (
         <form onSubmit={this.handleSubmit} style={nyhetsbrevFormStyle}>
           <input
+            style={inputStyle}
             type="text"
             value={this.state.contact.emailAdress}
             placeholder="Ange email"
@@ -81,4 +81,8 @@ const nyhetsbrevTextStyle: CSSProperties = {
 
 const nyhetsbrevFormStyle: CSSProperties = {
   marginBottom: "2rem"
+};
+
+const inputStyle: CSSProperties = {
+  margin: "0.5rem"
 };
