@@ -1,8 +1,9 @@
-import React, { CSSProperties } from "react";
+import React, { Component } from "react";
 import { divStyleOnPages, textStylePages } from "../src/css";
 import Nyhetsbrev from "./Nyhetsbrev";
 import Axios from "axios";
 import ErrorBoundary from "./ErrorBoundery";
+import { picturesOnPages } from "./css";
 
 interface Props {}
 
@@ -10,8 +11,7 @@ interface State {
   images: string[];
 }
 
-export default class Omoss extends React.Component<Props, State> {
-
+export default class Omoss extends Component<Props, State> {
   state = {
     images: []
   };
@@ -44,13 +44,9 @@ export default class Omoss extends React.Component<Props, State> {
           <Nyhetsbrev />
         </ErrorBoundary>
         {this.state.images.map(image => (
-          <img alt="gallery" style={imageStyle} src={image}></img>
+          <img alt="gallery" style={picturesOnPages} src={image}></img>
         ))}
       </div>
     );
   }
 }
-
-const imageStyle: CSSProperties = {
-  margin: "0.3rem"
-};

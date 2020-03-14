@@ -1,4 +1,4 @@
-import React, { CSSProperties } from "react";
+import React, { CSSProperties, Component } from "react";
 import { AppEvent } from "./App";
 import Modal from "./Modal";
 
@@ -11,7 +11,7 @@ interface State {
   showModal: boolean;
 }
 
-export default class SectionItem extends React.Component<Props, State> {
+export default class SectionItem extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { isMouseOver: false, showModal: false };
@@ -46,7 +46,7 @@ export default class SectionItem extends React.Component<Props, State> {
         </Modal>
       );
     } else {
-      return undefined
+      return undefined;
     }
   }
 
@@ -80,12 +80,10 @@ export default class SectionItem extends React.Component<Props, State> {
   }
 }
 
-
 const modalImage: CSSProperties = {
   maxWidth: "80%",
   maxHeight: "80%",
   border: "2px solid white"
-
 };
 
 const imgStyle: CSSProperties = {

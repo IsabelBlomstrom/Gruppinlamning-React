@@ -53,7 +53,7 @@ export default class Nyhetsbrev extends Component<Props, State> {
         <form onSubmit={this.handleSubmit} style={nyhetsbrevFormStyle}>
           <input
             style={inputStyle}
-            type="text"
+            type="email"
             value={this.state.contact.emailAdress}
             placeholder="Ange email"
             onChange={this.handleInputChangeEMail}

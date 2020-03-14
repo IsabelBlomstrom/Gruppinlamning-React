@@ -15,7 +15,7 @@ export const picturesOnPages: CSSProperties = {
 };
 
 export const textStylePages: CSSProperties = {
-  marginTop: "5rem",
+  marginTop: "1rem",
   width: "50%",
   fontSize: "1rem"
 };

@@ -8,6 +8,7 @@ import { Switch, Route, BrowserRouter } from "react-router-dom";
 import Kontakt from "./Kontakt";
 import Omoss from "./Omoss";
 import Studio from "./Studio";
+import ErrorBoundary from "./ErrorBoundery";
 
 const MainContent = React.lazy(() => import("./MainContent"));
 
@@ -49,15 +50,15 @@ function App() {
         <Header />
         <Switch>
           <Route exact path="/">
-            <Suspense fallback={<div>Loading...</div>}>
-              <MainContent events={mockedData} />
-            </Suspense>
+            <ErrorBoundary>
+              <Suspense fallback={<div>Loading...</div>}>
+                <MainContent events={mockedData} />
+              </Suspense>
+            </ErrorBoundary>
           </Route>
           <Route path="/Kontakt" component={Kontakt} />
           <Route path="/Omoss" component={Omoss} />
-          <Route path="/Studio">
-            <Studio />
-          </Route>
+          <Route path="/Studio" component={Studio} />
         </Switch>
       </div>
     </BrowserRouter>

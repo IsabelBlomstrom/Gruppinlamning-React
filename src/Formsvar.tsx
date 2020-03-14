@@ -6,7 +6,6 @@ interface Props {
 }
 
 export default class Formsvar extends Component<Props> {
-
   render() {
     return (
       <div style={formSvarStyle}>

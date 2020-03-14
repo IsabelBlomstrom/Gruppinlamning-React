@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, CSSProperties } from "react";
 
 interface Props {}
 interface State {
@@ -21,11 +21,11 @@ export default class ErrorBoundary extends Component<Props, State> {
   render() {
     if (this.state.hasError) {
       return (
-        <div>
-          <h2>¡Could not load component!</h2>
+        <div style={styleErrorMessage}>
+          <h2>Something went wrong</h2>
           <b>
             <a href="" onClick={this.reloadPage}>
-              Reload
+              Click to reload
             </a>
           </b>
         </div>
@@ -35,3 +35,10 @@ export default class ErrorBoundary extends Component<Props, State> {
     return this.props.children;
   }
 }
+
+const styleErrorMessage: CSSProperties = {
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center"
+};
