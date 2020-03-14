@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import { divStyleOnPages, textStylePages } from "../src/css";
+import { divStyleOnPages, textStylePages, picturesOnPages } from "../src/css";
 import Nyhetsbrev from "./Nyhetsbrev";
 import Axios from "axios";
 import ErrorBoundary from "./ErrorBoundery";
-import { picturesOnPages } from "./css";
 
 interface Props {}
 
