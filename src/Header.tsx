@@ -1,8 +1,8 @@
-import React, { CSSProperties } from "react";
+import React, { CSSProperties, Component } from "react";
 import Logo from "./assets/logolunden.png";
 import { Link } from "react-router-dom";
 
-export default class Header extends React.Component {
+export default class Header extends Component {
   render() {
     return (
       <header style={appHeader}>

@@ -1,6 +1,7 @@
-import React, { CSSProperties } from "react";
+import React, { Component } from "react";
 import SectionItem from "./SectionItem";
 import { AppEvent } from "./App";
+import { divStyleOnPages } from "./css";
 
 interface Props {
   events: AppEvent[];
@@ -8,11 +9,10 @@ interface Props {
 
 interface State {}
 
-export default class MainContens extends React.Component<Props, State> {
-
+export default class MainContens extends Component<Props, State> {
   render() {
     return (
-      <div style={mainStyle} className="mainContent">
+      <div style={divStyleOnPages} className="mainContent">
         {this.props.events.map(event => (
           <SectionItem key={event.title} event={event} />
         ))}
@@ -20,10 +20,3 @@ export default class MainContens extends React.Component<Props, State> {
     );
   }
 }
-
-const mainStyle: CSSProperties = {
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  alignItems: "center"
-};

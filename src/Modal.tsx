@@ -1,9 +1,9 @@
-import React, { CSSProperties } from "react";
+import React, { CSSProperties, Component } from "react";
 import ReactDOM from "react-dom";
 
 interface Props {}
 
-export default class Modal extends React.Component<Props> {
+export default class Modal extends Component<Props> {
   modalDiv = document.getElementById("modal-root");
   modalElement: HTMLElement = document.createElement("div");
 
@@ -33,5 +33,5 @@ const modalStyle: CSSProperties = {
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
-  alignItems: "center",
+  alignItems: "center"
 };

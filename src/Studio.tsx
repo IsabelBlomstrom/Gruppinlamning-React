@@ -1,11 +1,11 @@
-import React from "react";
+import React, { Component } from "react";
 import Image from "./assets/studio.jpg";
 import { divStyleOnPages, textStylePages, picturesOnPages } from "./css";
 
 interface Props {}
 
 interface State {}
-export default class Studio extends React.Component<Props, State> {
+export default class Studio extends Component<Props, State> {
   render() {
     return (
       <div style={divStyleOnPages} className="studio">

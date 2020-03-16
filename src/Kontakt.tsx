@@ -1,6 +1,7 @@
-import React, { CSSProperties } from "react";
+import React, { CSSProperties, Component } from "react";
 import Formsvar from "./Formsvar";
 import { Redirect, Switch, Route, RouteComponentProps } from "react-router-dom";
+import ErrorBoundary from "./ErrorBoundery";
 
 interface Props extends RouteComponentProps {}
 
@@ -15,7 +16,7 @@ export interface BookingRequest {
   message: string;
 }
 
-export default class Kontakt extends React.Component<Props, State> {
+export default class Kontakt extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
@@ -68,10 +69,12 @@ export default class Kontakt extends React.Component<Props, State> {
     return (
       <Switch>
         <Route path={path + "/bekraftelse"}>
-          <Formsvar svar={this.state.bookingRequest} />
+          <ErrorBoundary>
+            <Formsvar svar={this.state.bookingRequest} />
+          </ErrorBoundary>
         </Route>
         <Route>
-          <div style={FormStyle} className="Kontakt">
+          <div style={FormStyle} className="kontakt">
             <p style={{ margin: "0 0 2rem 0", textAlign: "center" }}>
               Vill ni komma i kontakt med oss? <br />
               Snälla fyll i formuläret nedan så kontaktar vi dig.
@@ -99,7 +102,7 @@ export default class Kontakt extends React.Component<Props, State> {
                 <textarea
                   placeholder={"Skriv ditt meddelande här"}
                   cols={100}
-                  rows={15}
+                  rows={12}
                   style={areaStyle}
                   value={this.state.bookingRequest.message}
                   onChange={this.handleInputChangeMessage}
