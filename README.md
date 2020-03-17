@@ -43,11 +43,13 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
+Länk till repot: https://github.com/IsabelBlomstrom/Gruppinlamning-React
+
 
 Välkommen till hemsidan för Galleri Lunden! 
 Det är ett påhittat galleri som vi har skapat för att testa på React. Sidan är skapad med komponenter som vi navigerar emellan
 genom att använda Routes och links. Bilderna har vi laddat ner från unsplash.com och har även skapat ett API på unslpash som
-vi har på vår "studio"-sida där vi bestämt att visa de tre första bilderna som API:et hämtar.
+vi har på vår "Omoss"-sida där vi bestämt att visa de tre första bilderna som API:et hämtar.
 På första sidan finns tre bilder som visar föregående visningar. Genom att trycka på bilderna visas de i större format i form av
 en modal. Genom att trycka på modalen så går bilden tillbaka till ett mindre format igen. 
 Inne på fliken kontakt finns ett formulär användaren kan fylla i. När användaren klickar på submit så visas komponenten "formsvar" som 
