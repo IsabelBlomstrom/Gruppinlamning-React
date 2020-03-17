@@ -1,3 +1,20 @@
+GALLERI LUNDEN
+
+Välkommen till hemsidan för Galleri Lunden! 
+Det är ett påhittat galleri som vi har skapat för att testa på React. Sidan är skapad med komponenter som vi navigerar emellan
+genom att använda Routes och links. Bilderna har vi laddat ner från unsplash.com och har även skapat ett nyckel på unsplash för att få tillgång till deras API, som
+vi har på vår "Omoss"-sida där vi bestämt att visa de tre första bilderna som API:et hämtar.
+På första sidan finns tre bilder som visar föregående visningar. Genom att trycka på bilderna visas de i större format i form av
+en modal. Genom att trycka på modalen så går bilden tillbaka till ett mindre format igen. 
+Inne på fliken kontakt finns ett formulär användaren kan fylla i. När användaren klickar på submit så visas komponenten "formsvar" som 
+visar användaren vad för information som har fyllts i. 
+Inne på fliken "Omoss" finns även där en liknande funktion som låter användaren fylla i sin email om användaren vill börja prenumerera 
+på Galleri Lundens nyhetsbrev. Där visas även bilderna från API:et. 
+Loggan på sidan har en link, så genom att trycka på den så kommer man vidare till startsidan. 
+
+Länk till repot: https://github.com/IsabelBlomstrom/Gruppinlamning-React
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -42,18 +59,3 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
-Länk till repot: https://github.com/IsabelBlomstrom/Gruppinlamning-React
-
-
-Välkommen till hemsidan för Galleri Lunden! 
-Det är ett påhittat galleri som vi har skapat för att testa på React. Sidan är skapad med komponenter som vi navigerar emellan
-genom att använda Routes och links. Bilderna har vi laddat ner från unsplash.com och har även skapat ett API på unslpash som
-vi har på vår "Omoss"-sida där vi bestämt att visa de tre första bilderna som API:et hämtar.
-På första sidan finns tre bilder som visar föregående visningar. Genom att trycka på bilderna visas de i större format i form av
-en modal. Genom att trycka på modalen så går bilden tillbaka till ett mindre format igen. 
-Inne på fliken kontakt finns ett formulär användaren kan fylla i. När användaren klickar på submit så visas komponenten "formsvar" som 
-visar användaren vad för information som har fyllts i. 
-Inne på fliken "Omoss" finns även där en liknande funktion som låter användaren fylla i sin email om användaren vill börja prenumerera 
-på Galleri Lundens nyhetsbrev. Där visas även det API:et. 
-Loggan på sidan har en link, så genom att trycka på den så kommer man vidare till startsidan. 
