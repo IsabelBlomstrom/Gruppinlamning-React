@@ -4,7 +4,7 @@ Välkommen till hemsidan för Galleri Lunden!
 Det är ett påhittat galleri som vi har skapat för att testa på React. Sidan är skapad med komponenter som vi navigerar emellan
 genom att använda Routes och links. Bilderna har vi laddat ner från unsplash.com och har även skapat ett nyckel på unsplash för att få tillgång till deras API, som
 vi har på vår "Omoss"-sida där vi bestämt att visa de tre första bilderna som API:et hämtar.
-På första sidan finns tre bilder som visar föregående visningar. Genom att trycka på bilderna visas de i större format i form av
+På första sidan finns tre bilder som visar föregående utställningar. Genom att trycka på bilderna visas de i större format i form av
 en modal. Genom att trycka på modalen så går bilden tillbaka till ett mindre format igen. 
 Inne på fliken kontakt finns ett formulär användaren kan fylla i. När användaren klickar på submit så visas komponenten "formsvar" som 
 visar användaren vad för information som har fyllts i. 
